@@ -42,8 +42,8 @@ public class RSA {
     private static void rsaEncrypt(String stringa) {
         Random rng = new Random();
 
-        BigInteger p = BigInteger.probablePrime(16, rng); //16 bit
-        BigInteger q = BigInteger.probablePrime(16, rng);
+        BigInteger p = BigInteger.probablePrime(1024, rng); //1024 bit
+        BigInteger q = BigInteger.probablePrime(1024, rng);
 
         logger.debug("Numeri primi generati: p={}, q={}", p, q);
         BigInteger n = p.multiply(q);
